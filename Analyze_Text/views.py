@@ -28,7 +28,7 @@ def analyze(request):
         param = {'purpose': 'Removing Punctuations', 'final_outcome': result}
         user_text = result
         purpose += 'Removing Punctuations,'
-        # return render(request, 'analyze2.html', param)
+       
 
     if allcaps == 'on':
         result = ''
@@ -37,7 +37,7 @@ def analyze(request):
                  'final_outcome': result}
         user_text = result
         purpose += ' Capitalizing every character,'
-        # return render(request, 'analyze2.html', param)
+       
 
     if newlineremove == 'on':
         result = ''
@@ -47,7 +47,7 @@ def analyze(request):
         param = {'purpose': 'Removing Newline', 'final_outcome': result}
         user_text = result
         purpose += ' Removing Newline,'
-        # return render(request, 'analyze2.html', param)
+       
     
     
     if removenum == "on":
@@ -69,7 +69,7 @@ def analyze(request):
                  'final_outcome': result}
         user_text = result
         purpose += ' Removing Unwanted Spaces,'
-        # return render(request, 'analyze2.html', param)
+        
 
     if (removepunc != 'on' and allcaps != 'on' and newlineremove != 'on' and removenum != 'on' and extraspaceremove != 'on'):
         return render(request, 'empty.html')
